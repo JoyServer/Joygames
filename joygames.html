@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Games</title>
+    <link rel="icon" type="image/png" href="joyicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="joy1">
+        <a href="https://discord.com/invite/g3s3ajUZCu"><img src="joy1.png" height="250" title="joy discord"></a>
+        <a href="phpjoy.php"></a>
+    </div>
+
+    <div class="video-container">
+        <div class="area" >
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>أهلا بموقع Joy للألعاب!</h1>
+        </header>
+        <main>
+            <form onsubmit="event.preventDefault(); joy();">
+                <input type="text" id="id" name="id" placeholder="Enter code...">
+                <button type="submit">Search</button>
+            </form>                    
+        </main>
+    </div>
+
+    <footer>
+        <p>!شكرا على الزيارة واستمتع بالألعاب</p>
+    </footer>
+
+    <script>
+        function joy() {
+            const api = "https://script.google.com/macros/s/AKfycbzYbtrWljiuC-cK_n1A98e-EWBjQfEc-VRaFxxX8ac-8emRwSs1Q84hOV4T9GCSROPRaw/exec";
+            fetch(api)
+            .then(response => response.json())
+            .then(res => getUrl(res.data));
+            
+            let code = document.getElementById('id');
+            getUrl = e => {
+                let found = false;
+                e.forEach(e => {
+                    if (e.id == code.value) {
+                        location.href = e.url;
+                        found = true;
+                    }
+                });
+                
+                if (!found) {
+                    location.href = "https://youtu.be/dQw4w9WgXcQ";
+                }
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+
+    <a href="https://discord.com/invite/g3s3ajUZCu" target="_blank">
+        <button id="discord-button">Joy سيرفر</button>
+    </a>
+</body>
+</html>
+
+
+	<header>
+		<h1>Joy جميع اكواد الالعاب بتحصلها بسيرفر   </h1>
+		<h1>اكتب في روم الشات  : <span class="black">اكواد؟</span>  </h1>
+		
